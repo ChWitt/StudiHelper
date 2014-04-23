@@ -15,3 +15,4 @@ Features:
 Planned:
 - import the full timetable
 - customize the timetable for a student
+- update routine
