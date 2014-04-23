@@ -188,6 +188,27 @@
       MergedLesson lesson = (MergedLesson)this.lessonOfCurs.Rows[e.RowIndex].DataBoundItem;
       IsLessonIsOver(e, lesson);
     }
+
+    private void einstellungenToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show("Diese Funktion ist zur Zeit noch nicht verfügbar", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+
+    private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      this.Close();
+    }
+
+    private void überToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show("Diese Funktion ist zur Zeit noch nicht verfügbar", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+
+    private void nachUpdateSuchenToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+
+      MessageBox.Show("Diese Funktion ist zur Zeit noch nicht verfügbar", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
   }
 
   #region "HelperClasses"

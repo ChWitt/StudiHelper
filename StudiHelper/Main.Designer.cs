@@ -78,6 +78,13 @@
       this.CursCombobox = new System.Windows.Forms.ComboBox();
       this.ModuleCombobox = new System.Windows.Forms.ComboBox();
       this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+      this.allgmeinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.überToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.nachUpdateSuchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.tabStudiHelper.SuspendLayout();
       this.LessonsOfDayTab.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.LessonsOfDay)).BeginInit();
@@ -94,6 +101,7 @@
       this.MondayPanel.SuspendLayout();
       this.lessonsOfCurs.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.lessonOfCurs)).BeginInit();
+      this.menuStrip1.SuspendLayout();
       this.SuspendLayout();
       // 
       // tabStudiHelper
@@ -102,10 +110,10 @@
       this.tabStudiHelper.Controls.Add(this.LessonsOfWeekTab);
       this.tabStudiHelper.Controls.Add(this.lessonsOfCurs);
       this.tabStudiHelper.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.tabStudiHelper.Location = new System.Drawing.Point(0, 0);
+      this.tabStudiHelper.Location = new System.Drawing.Point(0, 24);
       this.tabStudiHelper.Name = "tabStudiHelper";
       this.tabStudiHelper.SelectedIndex = 0;
-      this.tabStudiHelper.Size = new System.Drawing.Size(863, 422);
+      this.tabStudiHelper.Size = new System.Drawing.Size(863, 398);
       this.tabStudiHelper.TabIndex = 0;
       // 
       // LessonsOfDayTab
@@ -116,7 +124,7 @@
       this.LessonsOfDayTab.Location = new System.Drawing.Point(4, 22);
       this.LessonsOfDayTab.Name = "LessonsOfDayTab";
       this.LessonsOfDayTab.Padding = new System.Windows.Forms.Padding(3);
-      this.LessonsOfDayTab.Size = new System.Drawing.Size(855, 396);
+      this.LessonsOfDayTab.Size = new System.Drawing.Size(855, 372);
       this.LessonsOfDayTab.TabIndex = 0;
       this.LessonsOfDayTab.Text = "Am Tag";
       this.LessonsOfDayTab.UseVisualStyleBackColor = true;
@@ -140,7 +148,7 @@
       this.LessonsOfDay.Location = new System.Drawing.Point(8, 35);
       this.LessonsOfDay.Name = "LessonsOfDay";
       this.LessonsOfDay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-      this.LessonsOfDay.Size = new System.Drawing.Size(839, 353);
+      this.LessonsOfDay.Size = new System.Drawing.Size(839, 329);
       this.LessonsOfDay.TabIndex = 3;
       this.LessonsOfDay.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.LessonsOfDay_CellFormatting);
       // 
@@ -231,7 +239,7 @@
       this.LessonsOfWeekTab.Location = new System.Drawing.Point(4, 22);
       this.LessonsOfWeekTab.Name = "LessonsOfWeekTab";
       this.LessonsOfWeekTab.Padding = new System.Windows.Forms.Padding(3);
-      this.LessonsOfWeekTab.Size = new System.Drawing.Size(855, 396);
+      this.LessonsOfWeekTab.Size = new System.Drawing.Size(855, 372);
       this.LessonsOfWeekTab.TabIndex = 1;
       this.LessonsOfWeekTab.Text = "in der Woche";
       this.LessonsOfWeekTab.UseVisualStyleBackColor = true;
@@ -262,25 +270,25 @@
       this.LayoutWeek.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
       this.LayoutWeek.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
       this.LayoutWeek.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-      this.LayoutWeek.Size = new System.Drawing.Size(849, 390);
+      this.LayoutWeek.Size = new System.Drawing.Size(849, 366);
       this.LayoutWeek.TabIndex = 0;
       // 
       // LegendPanel
       // 
       this.LayoutWeek.SetColumnSpan(this.LegendPanel, 7);
       this.LegendPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.LegendPanel.Location = new System.Drawing.Point(3, 354);
+      this.LegendPanel.Location = new System.Drawing.Point(3, 331);
       this.LegendPanel.Name = "LegendPanel";
-      this.LegendPanel.Size = new System.Drawing.Size(843, 33);
+      this.LegendPanel.Size = new System.Drawing.Size(843, 32);
       this.LegendPanel.TabIndex = 12;
       // 
       // SundayPanel
       // 
       this.SundayPanel.Controls.Add(this.SundayLabel);
       this.SundayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.SundayPanel.Location = new System.Drawing.Point(729, 42);
+      this.SundayPanel.Location = new System.Drawing.Point(729, 39);
       this.SundayPanel.Name = "SundayPanel";
-      this.SundayPanel.Size = new System.Drawing.Size(117, 306);
+      this.SundayPanel.Size = new System.Drawing.Size(117, 286);
       this.SundayPanel.TabIndex = 11;
       // 
       // SundayLabel
@@ -299,9 +307,9 @@
       // 
       this.SaturdayPanel.Controls.Add(this.SaturdayLabel);
       this.SaturdayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.SaturdayPanel.Location = new System.Drawing.Point(608, 42);
+      this.SaturdayPanel.Location = new System.Drawing.Point(608, 39);
       this.SaturdayPanel.Name = "SaturdayPanel";
-      this.SaturdayPanel.Size = new System.Drawing.Size(115, 306);
+      this.SaturdayPanel.Size = new System.Drawing.Size(115, 286);
       this.SaturdayPanel.TabIndex = 10;
       // 
       // SaturdayLabel
@@ -320,9 +328,9 @@
       // 
       this.FridayPanel.Controls.Add(this.FridayLabel);
       this.FridayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.FridayPanel.Location = new System.Drawing.Point(487, 42);
+      this.FridayPanel.Location = new System.Drawing.Point(487, 39);
       this.FridayPanel.Name = "FridayPanel";
-      this.FridayPanel.Size = new System.Drawing.Size(115, 306);
+      this.FridayPanel.Size = new System.Drawing.Size(115, 286);
       this.FridayPanel.TabIndex = 9;
       // 
       // FridayLabel
@@ -341,9 +349,9 @@
       // 
       this.ThursdayPanel.Controls.Add(this.ThursdayLabel);
       this.ThursdayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.ThursdayPanel.Location = new System.Drawing.Point(366, 42);
+      this.ThursdayPanel.Location = new System.Drawing.Point(366, 39);
       this.ThursdayPanel.Name = "ThursdayPanel";
-      this.ThursdayPanel.Size = new System.Drawing.Size(115, 306);
+      this.ThursdayPanel.Size = new System.Drawing.Size(115, 286);
       this.ThursdayPanel.TabIndex = 8;
       // 
       // ThursdayLabel
@@ -362,9 +370,9 @@
       // 
       this.WednesdayPanel.Controls.Add(this.WednesdayLabel);
       this.WednesdayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.WednesdayPanel.Location = new System.Drawing.Point(245, 42);
+      this.WednesdayPanel.Location = new System.Drawing.Point(245, 39);
       this.WednesdayPanel.Name = "WednesdayPanel";
-      this.WednesdayPanel.Size = new System.Drawing.Size(115, 306);
+      this.WednesdayPanel.Size = new System.Drawing.Size(115, 286);
       this.WednesdayPanel.TabIndex = 7;
       // 
       // WednesdayLabel
@@ -383,9 +391,9 @@
       // 
       this.TuesdayPanel.Controls.Add(this.TuesdayLabel);
       this.TuesdayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.TuesdayPanel.Location = new System.Drawing.Point(124, 42);
+      this.TuesdayPanel.Location = new System.Drawing.Point(124, 39);
       this.TuesdayPanel.Name = "TuesdayPanel";
-      this.TuesdayPanel.Size = new System.Drawing.Size(115, 306);
+      this.TuesdayPanel.Size = new System.Drawing.Size(115, 286);
       this.TuesdayPanel.TabIndex = 6;
       // 
       // TuesdayLabel
@@ -408,7 +416,7 @@
       this.HeaderSetDate.Dock = System.Windows.Forms.DockStyle.Fill;
       this.HeaderSetDate.Location = new System.Drawing.Point(3, 3);
       this.HeaderSetDate.Name = "HeaderSetDate";
-      this.HeaderSetDate.Size = new System.Drawing.Size(843, 33);
+      this.HeaderSetDate.Size = new System.Drawing.Size(843, 30);
       this.HeaderSetDate.TabIndex = 4;
       // 
       // loadLessonsOfWeek
@@ -432,9 +440,9 @@
       // 
       this.MondayPanel.Controls.Add(this.MondayLabel);
       this.MondayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.MondayPanel.Location = new System.Drawing.Point(3, 42);
+      this.MondayPanel.Location = new System.Drawing.Point(3, 39);
       this.MondayPanel.Name = "MondayPanel";
-      this.MondayPanel.Size = new System.Drawing.Size(115, 306);
+      this.MondayPanel.Size = new System.Drawing.Size(115, 286);
       this.MondayPanel.TabIndex = 5;
       // 
       // MondayLabel
@@ -460,7 +468,7 @@
       this.lessonsOfCurs.Location = new System.Drawing.Point(4, 22);
       this.lessonsOfCurs.Name = "lessonsOfCurs";
       this.lessonsOfCurs.Padding = new System.Windows.Forms.Padding(3);
-      this.lessonsOfCurs.Size = new System.Drawing.Size(855, 396);
+      this.lessonsOfCurs.Size = new System.Drawing.Size(855, 372);
       this.lessonsOfCurs.TabIndex = 2;
       this.lessonsOfCurs.Text = "Kurs anzeigen";
       this.lessonsOfCurs.UseVisualStyleBackColor = true;
@@ -608,12 +616,70 @@
       this.dataGridViewTextBoxColumn1.ReadOnly = true;
       this.dataGridViewTextBoxColumn1.Width = 200;
       // 
+      // menuStrip1
+      // 
+      this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.allgmeinToolStripMenuItem,
+            this.infoToolStripMenuItem});
+      this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+      this.menuStrip1.Name = "menuStrip1";
+      this.menuStrip1.Size = new System.Drawing.Size(863, 24);
+      this.menuStrip1.TabIndex = 5;
+      this.menuStrip1.Text = "menuStrip1";
+      // 
+      // allgmeinToolStripMenuItem
+      // 
+      this.allgmeinToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.einstellungenToolStripMenuItem,
+            this.beendenToolStripMenuItem});
+      this.allgmeinToolStripMenuItem.Name = "allgmeinToolStripMenuItem";
+      this.allgmeinToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+      this.allgmeinToolStripMenuItem.Text = "Allgmein";
+      // 
+      // einstellungenToolStripMenuItem
+      // 
+      this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
+      this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+      this.einstellungenToolStripMenuItem.Text = "Einstellungen";
+      this.einstellungenToolStripMenuItem.Click += new System.EventHandler(this.einstellungenToolStripMenuItem_Click);
+      // 
+      // beendenToolStripMenuItem
+      // 
+      this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
+      this.beendenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+      this.beendenToolStripMenuItem.Text = "Beenden";
+      this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
+      // 
+      // infoToolStripMenuItem
+      // 
+      this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.überToolStripMenuItem,
+            this.nachUpdateSuchenToolStripMenuItem});
+      this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+      this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+      this.infoToolStripMenuItem.Text = "Info";
+      // 
+      // überToolStripMenuItem
+      // 
+      this.überToolStripMenuItem.Name = "überToolStripMenuItem";
+      this.überToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+      this.überToolStripMenuItem.Text = "Über ...";
+      this.überToolStripMenuItem.Click += new System.EventHandler(this.überToolStripMenuItem_Click);
+      // 
+      // nachUpdateSuchenToolStripMenuItem
+      // 
+      this.nachUpdateSuchenToolStripMenuItem.Name = "nachUpdateSuchenToolStripMenuItem";
+      this.nachUpdateSuchenToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+      this.nachUpdateSuchenToolStripMenuItem.Text = "Nach Update suchen";
+      this.nachUpdateSuchenToolStripMenuItem.Click += new System.EventHandler(this.nachUpdateSuchenToolStripMenuItem_Click);
+      // 
       // Main
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(863, 422);
       this.Controls.Add(this.tabStudiHelper);
+      this.Controls.Add(this.menuStrip1);
       this.Name = "Main";
       this.Text = "Main";
       this.tabStudiHelper.ResumeLayout(false);
@@ -633,7 +699,10 @@
       this.lessonsOfCurs.ResumeLayout(false);
       this.lessonsOfCurs.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.lessonOfCurs)).EndInit();
+      this.menuStrip1.ResumeLayout(false);
+      this.menuStrip1.PerformLayout();
       this.ResumeLayout(false);
+      this.PerformLayout();
 
         }
 
@@ -688,6 +757,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem allgmeinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem einstellungenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem beendenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem überToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nachUpdateSuchenToolStripMenuItem;
     }
 }
 
