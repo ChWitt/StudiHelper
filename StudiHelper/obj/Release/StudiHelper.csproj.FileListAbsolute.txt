@@ -1,0 +1,15 @@
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Release\StudiHelper.exe.config
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Release\DataSource\Data.mdf
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Release\DataSource\Data_log.ldf
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Release\StudiHelper.exe
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Release\StudiHelper.pdb
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Release\StudiHelper.Main.resources
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Release\StudiHelper.Properties.Resources.resources
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Release\StudiHelper.csproj.GenerateResource.Cache
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Release\StudiHelper.exe
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Release\StudiHelper.pdb
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Release\StudiHelper.csprojResolveAssemblyReference.cache
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Release\EntityFramework.dll
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Release\EntityFramework.SqlServer.dll
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Release\EntityFramework.xml
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Release\EntityFramework.SqlServer.xml

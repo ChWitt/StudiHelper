@@ -1,0 +1,11 @@
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Debug\DataSource\Data.mdf
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Debug\DataSource\Data_log.ldf
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Debug\StudiHelper.Main.resources
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Debug\StudiHelper.Properties.Resources.resources
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Debug\StudiHelper.csproj.GenerateResource.Cache
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Debug\StudiHelper.exe
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Debug\StudiHelper.pdb
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Debug\StudiHelper.exe.config
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Debug\StudiHelper.exe
+D:\Sources\Testprojects\StudiHelper\StudiHelper\bin\Debug\StudiHelper.pdb
+D:\Sources\Testprojects\StudiHelper\StudiHelper\obj\Debug\StudiHelper.csprojResolveAssemblyReference.cache
