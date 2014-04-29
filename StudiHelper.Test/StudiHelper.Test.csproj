@@ -50,8 +50,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DataAccessTest.cs" />
+    <Compile Include="DataAccess\DataSourceConnectionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudiHelper.Core\StudiHelper.Core.csproj">
+      <Project>{C53809F3-3321-48C2-8D32-959193585FCA}</Project>
+      <Name>StudiHelper.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
