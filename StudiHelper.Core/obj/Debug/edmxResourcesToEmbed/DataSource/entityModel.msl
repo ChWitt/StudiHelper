@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="DataEntities">
+    <EntitySetMapping Name="Curs1">
+      <EntityTypeMapping TypeName="DataModel.Curs">
+        <MappingFragment StoreEntitySet="Curs">
+          <ScalarProperty Name="cursID" ColumnName="cursID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="creditPoints" ColumnName="creditPoints" />
+          <ScalarProperty Name="modulID" ColumnName="modulID" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lessons">
+      <EntityTypeMapping TypeName="DataModel.Lesson">
+        <MappingFragment StoreEntitySet="Lesson">
+          <ScalarProperty Name="lessonID" ColumnName="lessonID" />
+          <ScalarProperty Name="cursID" ColumnName="cursID" />
+          <ScalarProperty Name="start" ColumnName="start" />
+          <ScalarProperty Name="end" ColumnName="end" />
+          <ScalarProperty Name="building" ColumnName="building" />
+          <ScalarProperty Name="tutorID" ColumnName="tutorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moduls">
+      <EntityTypeMapping TypeName="DataModel.Modul">
+        <MappingFragment StoreEntitySet="Modul">
+          <ScalarProperty Name="moduleID" ColumnName="moduleID" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tutors">
+      <EntityTypeMapping TypeName="DataModel.Tutor">
+        <MappingFragment StoreEntitySet="Tutor">
+          <ScalarProperty Name="tutorID" ColumnName="tutorID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="DataModel.Store.GetAllOfCurs" FunctionImportName="GetAllOfCurs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DataModel.GetAllOfCurs_Result">
+          <ScalarProperty Name="lessonID" ColumnName="lessonID" />
+          <ScalarProperty Name="cursName" ColumnName="cursName" />
+          <ScalarProperty Name="cursDescription" ColumnName="cursDescription" />
+          <ScalarProperty Name="start" ColumnName="start" />
+          <ScalarProperty Name="end" ColumnName="end" />
+          <ScalarProperty Name="building" ColumnName="building" />
+          <ScalarProperty Name="tutorName" ColumnName="tutorName" />
+          <ScalarProperty Name="modulName" ColumnName="modulName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="DataModel.Store.GetAllOfDay" FunctionImportName="GetAllOfDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DataModel.GetAllOfDay_Result">
+          <ScalarProperty Name="lessonID" ColumnName="lessonID" />
+          <ScalarProperty Name="cursName" ColumnName="cursName" />
+          <ScalarProperty Name="cursDescription" ColumnName="cursDescription" />
+          <ScalarProperty Name="start" ColumnName="start" />
+          <ScalarProperty Name="end" ColumnName="end" />
+          <ScalarProperty Name="building" ColumnName="building" />
+          <ScalarProperty Name="tutorName" ColumnName="tutorName" />
+          <ScalarProperty Name="modulName" ColumnName="modulName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="DataModel.Store.GetAllOfWeek" FunctionImportName="GetAllOfWeek">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DataModel.GetAllOfWeek_Result">
+          <ScalarProperty Name="lessonID" ColumnName="lessonID" />
+          <ScalarProperty Name="cursName" ColumnName="cursName" />
+          <ScalarProperty Name="cursDescription" ColumnName="cursDescription" />
+          <ScalarProperty Name="start" ColumnName="start" />
+          <ScalarProperty Name="end" ColumnName="end" />
+          <ScalarProperty Name="building" ColumnName="building" />
+          <ScalarProperty Name="tutorName" ColumnName="tutorName" />
+          <ScalarProperty Name="modulName" ColumnName="modulName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

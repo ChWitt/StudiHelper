@@ -1,0 +1,6 @@
+D:\Sources\Testprojects\StudiHelper\StudieHelper.UI\obj\Debug\StudieHelper.UI.csprojResolveAssemblyReference.cache
+D:\Sources\Testprojects\StudiHelper\StudieHelper.UI\obj\Debug\StudiHelper.Main.resources
+D:\Sources\Testprojects\StudiHelper\StudieHelper.UI\obj\Debug\StudieHelper.UI.Properties.Resources.resources
+D:\Sources\Testprojects\StudiHelper\StudieHelper.UI\obj\Debug\StudieHelper.UI.csproj.GenerateResource.Cache
+D:\Sources\Testprojects\StudiHelper\StudieHelper.UI\obj\Debug\StudiHelper.UI.Main.resources
+D:\Sources\Testprojects\StudiHelper\StudieHelper.UI\obj\Debug\StudiHelper.UI.MainForm.resources

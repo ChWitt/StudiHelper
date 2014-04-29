@@ -1,0 +1,5 @@
+D:\Sources\Testprojects\StudiHelper\StudiHelper.Test\bin\Debug\StudiHelper.Test.dll
+D:\Sources\Testprojects\StudiHelper\StudiHelper.Test\bin\Debug\StudiHelper.Test.pdb
+D:\Sources\Testprojects\StudiHelper\StudiHelper.Test\obj\Debug\StudiHelper.Test.csprojResolveAssemblyReference.cache
+D:\Sources\Testprojects\StudiHelper\StudiHelper.Test\obj\Debug\StudiHelper.Test.dll
+D:\Sources\Testprojects\StudiHelper\StudiHelper.Test\obj\Debug\StudiHelper.Test.pdb
