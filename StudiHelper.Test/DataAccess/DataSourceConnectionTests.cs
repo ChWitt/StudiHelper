@@ -19,7 +19,9 @@ namespace StudiHelper.Core.DataAccess.Tests
     [TestMethod()]
     public void GetModulesTest()
     {
-      Assert.Fail();
+      //asser
+      //StudiHelper.Core.DataAccess.DataSourceConnectionFactory.GetInstance().GetModules();
+      //Assert.Fail();
     }
 
     [TestMethod()]

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="generalTest" storage="d:\sources\testprojects\studihelper\studihelper.test\dataaccess\generaltest.orderedtest" id="e5e80527-a57e-4746-a6d8-f262ffbc058a" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="b3efc4f5-aa43-29bf-fa32-fc3f6e0c07a0" name="GetConnectionTest" storage="..\bin\debug\studihelper.test.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="10f6ce53-1f13-6b28-7907-3c572c8067be" name="GetMergedLessonsOfWeekTest" storage="..\bin\debug\studihelper.test.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="2f328c5e-c20e-341a-0309-c5942d993892" name="GetCursesTest" storage="..\bin\debug\studihelper.test.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

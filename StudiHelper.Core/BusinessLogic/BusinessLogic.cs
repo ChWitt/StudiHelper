@@ -124,7 +124,7 @@ namespace StudiHelper.Core.BusinessLogic
       legendLabel.Name = mergedLesson.cursName;
       legendLabel.Text = curses[mergedLesson.cursName].Name + Environment.NewLine + curses[mergedLesson.cursName].Description;
       legendLabel.BackColor = backgroundColor;
-      legendLabel.Width = 70;
+      legendLabel.Width = 100;
       legendLabel.TextAlign = ContentAlignment.MiddleCenter;
 
       return legendLabel;

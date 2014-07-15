@@ -11,16 +11,3 @@ D:\Sources\Testprojects\StudiHelper\StudieHelper.UI\obj\Debug\StudieHelper.UI.Pr
 D:\Sources\Testprojects\StudiHelper\StudieHelper.UI\obj\Debug\StudiHelper.UI.csproj.GenerateResource.Cache
 D:\Sources\Testprojects\StudiHelper\StudieHelper.UI\obj\Debug\StudieHelper.UI.exe
 D:\Sources\Testprojects\StudiHelper\StudieHelper.UI\obj\Debug\StudieHelper.UI.pdb
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\bin\Debug\DataSource\Data.mdf
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\bin\Debug\DataSource\Data_log.ldf
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\bin\Debug\StudieHelper.UI.exe.config
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\bin\Debug\StudieHelper.UI.exe
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\bin\Debug\StudieHelper.UI.pdb
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\bin\Debug\StudiHelper.Core.dll
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\bin\Debug\StudiHelper.Core.pdb
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\obj\Debug\StudiHelper.UI.csprojResolveAssemblyReference.cache
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\obj\Debug\StudiHelper.UI.MainForm.resources
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\obj\Debug\StudieHelper.UI.Properties.Resources.resources
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\obj\Debug\StudiHelper.UI.csproj.GenerateResource.Cache
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\obj\Debug\StudieHelper.UI.exe
-D:\Sources\Testprojects\StudiHelper\StudiHelper.UI\obj\Debug\StudieHelper.UI.pdb

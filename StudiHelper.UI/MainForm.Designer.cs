@@ -110,10 +110,10 @@
       this.tabStudiHelper.Controls.Add(this.LessonsOfWeekTab);
       this.tabStudiHelper.Controls.Add(this.lessonsOfCurs);
       this.tabStudiHelper.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.tabStudiHelper.Location = new System.Drawing.Point(0, 24);
+      this.tabStudiHelper.Location = new System.Drawing.Point(0, 0);
       this.tabStudiHelper.Name = "tabStudiHelper";
       this.tabStudiHelper.SelectedIndex = 0;
-      this.tabStudiHelper.Size = new System.Drawing.Size(863, 398);
+      this.tabStudiHelper.Size = new System.Drawing.Size(863, 422);
       this.tabStudiHelper.TabIndex = 0;
       // 
       // LessonsOfDayTab
@@ -124,7 +124,7 @@
       this.LessonsOfDayTab.Location = new System.Drawing.Point(4, 22);
       this.LessonsOfDayTab.Name = "LessonsOfDayTab";
       this.LessonsOfDayTab.Padding = new System.Windows.Forms.Padding(3);
-      this.LessonsOfDayTab.Size = new System.Drawing.Size(855, 372);
+      this.LessonsOfDayTab.Size = new System.Drawing.Size(855, 396);
       this.LessonsOfDayTab.TabIndex = 0;
       this.LessonsOfDayTab.Text = "Am Tag";
       this.LessonsOfDayTab.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
       this.LessonsOfDay.Location = new System.Drawing.Point(8, 35);
       this.LessonsOfDay.Name = "LessonsOfDay";
       this.LessonsOfDay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-      this.LessonsOfDay.Size = new System.Drawing.Size(839, 329);
+      this.LessonsOfDay.Size = new System.Drawing.Size(839, 353);
       this.LessonsOfDay.TabIndex = 3;
       this.LessonsOfDay.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.LessonsOfDay_CellFormatting);
       // 
@@ -626,6 +626,7 @@
       this.menuStrip1.Size = new System.Drawing.Size(863, 24);
       this.menuStrip1.TabIndex = 5;
       this.menuStrip1.Text = "menuStrip1";
+      this.menuStrip1.Visible = false;
       // 
       // allgmeinToolStripMenuItem
       // 
@@ -673,15 +674,16 @@
       this.nachUpdateSuchenToolStripMenuItem.Text = "Nach Update suchen";
       this.nachUpdateSuchenToolStripMenuItem.Click += new System.EventHandler(this.nachUpdateSuchenToolStripMenuItem_Click);
       // 
-      // Main
+      // MainForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(863, 422);
       this.Controls.Add(this.tabStudiHelper);
       this.Controls.Add(this.menuStrip1);
-      this.Name = "Main";
-      this.Text = "Main";
+      this.Name = "MainForm";
+      this.ShowIcon = false;
+      this.Text = "Studenplaner";
       this.tabStudiHelper.ResumeLayout(false);
       this.LessonsOfDayTab.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.LessonsOfDay)).EndInit();
