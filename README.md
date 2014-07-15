@@ -1,4 +1,4 @@
-StudiHelper
+StudiHelper V1.0
 ===========
 
 Short programm to organizing the plans of lecture.
@@ -11,8 +11,3 @@ Features:
   - of a curs
 - show if there are conflicts in the times of lectures
 - show if the lecture is in the past
-
-Planned:
-- import the full timetable
-- customize the timetable for a student
-- update routine
