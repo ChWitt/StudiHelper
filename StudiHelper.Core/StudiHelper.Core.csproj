@@ -75,6 +75,7 @@
     <Compile Include="DataAccess\DataSourceConnection.cs" />
     <Compile Include="Objects\Curs.cs" />
     <Compile Include="Objects\Lesson.cs" />
+    <Compile Include="Objects\MergedLesson.cs" />
     <Compile Include="Objects\Modul.cs" />
     <Compile Include="Objects\Tutor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

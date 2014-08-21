@@ -7,8 +7,8 @@
     <ProjectGuid>{BF2903F6-AD11-4DEE-9655-8BE43178B259}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StudieHelper.UI</RootNamespace>
-    <AssemblyName>StudieHelper.UI</AssemblyName>
+    <RootNamespace>StudiHelper.UI</RootNamespace>
+    <AssemblyName>StudiHelper.UI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,6 +48,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\DateGridColumn.cs" />
+    <Compile Include="Components\StudiHelperDataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\StudiHelperDataGrid.Designer.cs">
+      <DependentUpon>StudiHelperDataGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\TimeGridColumn.cs" />
+    <Compile Include="InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CursView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CursView.Designer.cs">
+      <DependentUpon>CursView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DayView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DayView.Designer.cs">
+      <DependentUpon>DayView.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +82,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\WeekView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\WeekView.Designer.cs">
+      <DependentUpon>WeekView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Components\StudiHelperDataGrid.resx">
+      <DependentUpon>StudiHelperDataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CursView.resx">
+      <DependentUpon>CursView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DayView.resx">
+      <DependentUpon>DayView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -67,7 +111,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\WeekView.resx">
+      <DependentUpon>WeekView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
