@@ -3,6 +3,7 @@ namespace StudiHelper.UI
 {
   using System.Windows.Forms;
   using StudiHelper.Core.BusinessLogic;
+  using StudiHelper.Core.Objects;
 
   /// <summary>
   /// View to display all lessons on day
@@ -24,7 +25,7 @@ namespace StudiHelper.UI
     /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
     private void loadLessonsOfDay_Click(object sender, EventArgs e)
     {
-      this.LessonsOfDay.DataSource = BusinessLogicFactory.GetInstance().GetMergedLessonsOfDay(DayPickerDay.Value);
+      this.LessonsOfDay.DataSource =  BusinessLogicFactory.GetInstance().GetMergedLessonsOfDay(DayPickerDay.Value);
     }
   }
 }

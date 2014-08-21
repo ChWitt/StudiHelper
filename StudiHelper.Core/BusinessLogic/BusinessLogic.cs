@@ -42,14 +42,14 @@ namespace StudiHelper.Core.BusinessLogic
     /// </summary>
     /// <param name="cursId">The curs identifier.</param>
     /// <returns>merged lessons by curse</returns>
-    List<MergedLesson> GetMergedLessonsOfCurs(int cursId);
+    SortableBindingList<MergedLesson> GetMergedLessonsOfCurs(int cursId);
 
     /// <summary>
     /// Gets the merged lessons of day.
     /// </summary>
     /// <param name="day">The day.</param>
     /// <returns>merged lessons by day</returns>
-    List<MergedLesson> GetMergedLessonsOfDay(DateTime day);
+    SortableBindingList<MergedLesson> GetMergedLessonsOfDay(DateTime day);
 
     /// <summary>
     /// Gets the merged lessons of week.
@@ -58,7 +58,7 @@ namespace StudiHelper.Core.BusinessLogic
     /// <param name="legendLabels">The legend labels.</param>
     /// <param name="lessonLabels">The lesson labels.</param>
     /// <returns>merged lessons by week</returns>
-    List<MergedLesson> GetMergedLessonsOfWeek(DateTime day, out Dictionary<string, Label> legendLabels, out Dictionary<DayOfWeek, List<Label>> lessonLabels);
+    SortableBindingList<MergedLesson> GetMergedLessonsOfWeek(DateTime day, out Dictionary<string, Label> legendLabels, out Dictionary<DayOfWeek, List<Label>> lessonLabels);
 
     /// <summary>
     /// Gets the modules.
@@ -120,11 +120,11 @@ namespace StudiHelper.Core.BusinessLogic
     /// <returns>
     /// merged lessons by curse
     /// </returns>
-    public List<MergedLesson> GetMergedLessonsOfCurs(int cursId)
+    public SortableBindingList<MergedLesson> GetMergedLessonsOfCurs(int cursId)
     {
-      List<MergedLesson> mergedLessons = DataAccess.DataSourceConnectionFactory.GetInstance().GetMergedLessonsOfCurs(cursId);
+      SortableBindingList<MergedLesson> mergedLessons = DataAccess.DataSourceConnectionFactory.GetInstance().GetMergedLessonsOfCurs(cursId);
       this.ValidationMergedLessons(mergedLessons);
-      mergedLessons.Sort();
+      
       return mergedLessons;
     }
 
@@ -135,11 +135,11 @@ namespace StudiHelper.Core.BusinessLogic
     /// <returns>
     /// merged lessons by day
     /// </returns>
-    public List<MergedLesson> GetMergedLessonsOfDay(DateTime day)
+    public SortableBindingList<MergedLesson> GetMergedLessonsOfDay(DateTime day)
     {
-      List<MergedLesson> mergedLessons = DataAccess.DataSourceConnectionFactory.GetInstance().GetMergedLessonsOfDay(day);
+      SortableBindingList<MergedLesson> mergedLessons = DataAccess.DataSourceConnectionFactory.GetInstance().GetMergedLessonsOfDay(day);
       this.ValidationMergedLessons(mergedLessons);
-      mergedLessons.Sort();
+     
       return mergedLessons;
     }
 
@@ -152,14 +152,13 @@ namespace StudiHelper.Core.BusinessLogic
     /// <returns>
     /// merged lessons by week
     /// </returns>
-    public List<MergedLesson> GetMergedLessonsOfWeek(DateTime day, out Dictionary<string, Label> legendLabels, out Dictionary<DayOfWeek, List<Label>> lessonLabels)
+    public SortableBindingList<MergedLesson> GetMergedLessonsOfWeek(DateTime day, out Dictionary<string, Label> legendLabels, out Dictionary<DayOfWeek, List<Label>> lessonLabels)
     {
       legendLabels = new Dictionary<string, Label>();
       lessonLabels = new Dictionary<DayOfWeek, List<Label>>();
 
-      List<Objects.MergedLesson> mergedLessons = DataAccess.DataSourceConnectionFactory.GetInstance().GetMergedLessonsOfWeek(day);
+      SortableBindingList<MergedLesson> mergedLessons = DataAccess.DataSourceConnectionFactory.GetInstance().GetMergedLessonsOfWeek(day);
       this.ValidationMergedLessons(mergedLessons);
-      mergedLessons.Sort();
 
       Dictionary<string, Curs> curses = DataAccess.DataSourceConnectionFactory.GetInstance().GetCurses();
       Color backgroundColor;
@@ -273,7 +272,7 @@ namespace StudiHelper.Core.BusinessLogic
     /// Validations the merged lessons.
     /// </summary>
     /// <param name="mergedLessons">The merged lessons.</param>
-    private void ValidationMergedLessons(List<MergedLesson> mergedLessons)
+    private void ValidationMergedLessons(SortableBindingList<MergedLesson> mergedLessons)
     {
       foreach (MergedLesson validationLesson in mergedLessons)
       {

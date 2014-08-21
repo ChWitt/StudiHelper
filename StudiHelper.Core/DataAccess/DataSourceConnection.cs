@@ -47,21 +47,21 @@ namespace StudiHelper.Core.DataAccess
     /// </summary>
     /// <param name="cursId">The curs identifier.</param>
     /// <returns>list with merged lessons of a curse</returns>
-    List<MergedLesson> GetMergedLessonsOfCurs(int cursId);
+    SortableBindingList<MergedLesson> GetMergedLessonsOfCurs(int cursId);
 
     /// <summary>
     /// Gets the merged lessons of day.
     /// </summary>
     /// <param name="day">The day.</param>
     /// <returns>list with merged lessons of a day</returns>
-    List<MergedLesson> GetMergedLessonsOfDay(DateTime day);
+    SortableBindingList<MergedLesson> GetMergedLessonsOfDay(DateTime day);
 
     /// <summary>
     /// Gets the merged lessons of week.
     /// </summary>
     /// <param name="day">The day.</param>
     /// <returns>list with merged lessons of a week</returns>
-    List<MergedLesson> GetMergedLessonsOfWeek(DateTime day);
+    SortableBindingList<MergedLesson> GetMergedLessonsOfWeek(DateTime day);
 
     /// <summary>
     /// Gets the modules.
@@ -205,14 +205,31 @@ namespace StudiHelper.Core.DataAccess
     /// <returns>
     /// list with merged lessons of a curse
     /// </returns>
-    public List<MergedLesson> GetMergedLessonsOfCurs(int cursId)
+    public SortableBindingList<MergedLesson> GetMergedLessonsOfCurs(int cursId)
     {
-      List<MergedLesson> mergedLessons = new List<MergedLesson>();
+      SortableBindingList<MergedLesson> mergedLessons = new SortableBindingList<MergedLesson>();
 
       using (SqlConnection connection = this.GetConnection())
       {
         connection.Open();
-        SqlCommand command = new SqlCommand("SELECT * FROM GetAllOfCurs(@cursID)", connection);
+        SqlCommand command = new SqlCommand("	SELECT lesson.lessonID, " +
+                                                    "curs.name as cursName, " +
+                                                    "curs.description as cursDescription, " +
+                                                    "lesson.start, " +
+                                                    "lesson.[end], " +
+                                                    "building.Name as building, " +
+                                                    "tutor.name as tutorName, " +
+                                                    "modul.name as modulName " + 
+	                                             "FROM lesson, " + 
+                                                    "curs, " + 
+                                                    "tutor, " + 
+                                                    "modul, " + 
+                                                    "Building " + 
+	                                            "WHERE lesson.cursID = @cursID " + 
+	                                              "AND lesson.cursID = curs.cursID " + 
+	                                              "AND lesson.tutorID = tutor.tutorID " + 
+	                                              "AND curs.modulID = modul.moduleID " + 
+	                                              "AND lesson.building = building.Id ", connection);
 
         command.Parameters.AddWithValue("@cursID", cursId);
 
@@ -245,16 +262,33 @@ namespace StudiHelper.Core.DataAccess
     /// <returns>
     /// list with merged lessons of a day
     /// </returns>
-    public List<MergedLesson> GetMergedLessonsOfDay(DateTime day)
+    public SortableBindingList<MergedLesson> GetMergedLessonsOfDay(DateTime day)
     {
-      List<MergedLesson> mergedLessons = new List<MergedLesson>();
+      SortableBindingList<MergedLesson> mergedLessons = new SortableBindingList<MergedLesson>();
 
       using (SqlConnection connection = this.GetConnection())
       {
         connection.Open();
-        SqlCommand command = new SqlCommand("SELECT * FROM GetAllOfDay(@Day)", connection);
+        SqlCommand command = new SqlCommand("SELECT lesson.lessonID, " +
+                                                   "curs.name as cursName, " +
+                                                   "curs.description as cursDescription, " +
+                                                   "lesson.start, " +
+                                                   "lesson.[end], " +
+                                                   "building.Name as buildingName, " +
+                                                   "tutor.name as tutorName, " +
+                                                   "modul.name as modulName " +
+	                                            "FROM lesson, " +
+                                                   "curs, " +
+                                                   "tutor, " +
+                                                   "modul, " +
+                                                   "building " +
+	                                           "WHERE (CAST(lesson.start AS DATE) = @Day) " +
+			                                          "AND lesson.cursID = curs.cursID " +
+			                                          "AND lesson.tutorID = tutor.tutorID " +
+			                                          "AND curs.modulID = modul.moduleID " +
+			                                          "AND lesson.building = building.Id", connection);
 
-        command.Parameters.AddWithValue("@Day", day);
+        command.Parameters.AddWithValue("@Day", day.Date);
 
         SqlDataReader dataReader = command.ExecuteReader();
         while (dataReader.Read())
@@ -266,7 +300,7 @@ namespace StudiHelper.Core.DataAccess
             CursDescription = (string)dataReader["cursDescription"],
             Start = (System.DateTime)dataReader["start"],
             End = (System.DateTime)dataReader["end"],
-            Building =(string)dataReader["building"],
+            Building = (string)dataReader["buildingName"],
             Tutor = (string)dataReader["tutorName"],
             Modul = (string)dataReader["modulName"]
           };
@@ -285,21 +319,39 @@ namespace StudiHelper.Core.DataAccess
     /// <returns>
     /// list with merged lessons of a week
     /// </returns>
-    public List<MergedLesson> GetMergedLessonsOfWeek(DateTime day)
+    public SortableBindingList<MergedLesson> GetMergedLessonsOfWeek(DateTime day)
     {
-      List<MergedLesson> mergedLessons = new List<MergedLesson>();
+      SortableBindingList<MergedLesson> mergedLessons = new SortableBindingList<MergedLesson>();
 
       using (SqlConnection connection = this.GetConnection())
       {
         connection.Open();
-        SqlCommand command = new SqlCommand("SELECT * FROM GetAllOfWeek(@FirstDayOfWeek, @LastDayOfWeek)", connection);
+        SqlCommand command = new SqlCommand("SELECT lesson.lessonID, " +
+                                                   "curs.name as cursName, " +
+                                                   "curs.description as cursDescription, " +
+                                                   "lesson.start, " +
+                                                   "lesson.[end], " +
+                                                   "building.Name as buildingName, " +
+                                                   "tutor.name as tutorName, " +
+                                                   "modul.name as modulName " +
+	                                            "FROM lesson, " +
+                                                   "curs, " +
+                                                   "tutor, " +
+                                                   "modul, " +
+                                                   "building " +
+	                                          "WHERE (CAST(lesson.start AS DATE) >= @FirstDay " + 
+                                               "AND CAST(lesson.start AS DATE) <= @LastDay) " +
+			                                         "AND lesson.cursID = curs.cursID " +
+			                                         "AND lesson.tutorID = tutor.tutorID " +
+			                                         "AND curs.modulID = modul.moduleID " +
+			                                         "AND lesson.building = building.Id", connection);
 
         DateTime firstDayOfWeek, lastDayOfWeek;
         firstDayOfWeek = day.AddDays(CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek - day.DayOfWeek);
         lastDayOfWeek = firstDayOfWeek.AddDays(6);
 
-        command.Parameters.AddWithValue("@FirstDayOfWeek", firstDayOfWeek);
-        command.Parameters.AddWithValue("@LastDayOfWeek", lastDayOfWeek);
+        command.Parameters.AddWithValue("@FirstDay", firstDayOfWeek);
+        command.Parameters.AddWithValue("@LastDay", lastDayOfWeek);
 
         SqlDataReader dataReader = command.ExecuteReader();
         while (dataReader.Read())
@@ -311,7 +363,7 @@ namespace StudiHelper.Core.DataAccess
             CursDescription = (string)dataReader["cursDescription"],
             Start = (System.DateTime)dataReader["start"],
             End = (System.DateTime)dataReader["end"],
-            Building = (string)dataReader["building"],
+            Building = (string)dataReader["buildingName"],
             Tutor = (string)dataReader["tutorName"],
             Modul = (string)dataReader["modulName"]
           };

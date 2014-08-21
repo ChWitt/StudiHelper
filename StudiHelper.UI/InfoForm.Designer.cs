@@ -35,6 +35,7 @@
       // 
       // close
       // 
+      this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
       this.close.Location = new System.Drawing.Point(298, 256);
       this.close.Name = "close";
       this.close.Size = new System.Drawing.Size(75, 23);
@@ -54,14 +55,19 @@
       // 
       // infoField
       // 
+      this.infoField.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.infoField.BackColor = System.Drawing.SystemColors.Info;
       this.infoField.Location = new System.Drawing.Point(15, 25);
       this.infoField.Multiline = true;
       this.infoField.Name = "infoField";
       this.infoField.ReadOnly = true;
+      this.infoField.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
       this.infoField.Size = new System.Drawing.Size(358, 225);
       this.infoField.TabIndex = 2;
       // 
-      // Info
+      // InfoForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,7 +76,7 @@
       this.Controls.Add(this.infoField);
       this.Controls.Add(this.titel);
       this.Controls.Add(this.close);
-      this.Name = "Info";
+      this.Name = "InfoForm";
       this.Text = "Info";
       this.ResumeLayout(false);
       this.PerformLayout();

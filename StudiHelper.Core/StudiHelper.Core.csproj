@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="BusinessLogic\BusinessLogic.cs" />
     <Compile Include="DataAccess\DataSourceConnection.cs" />
+    <Compile Include="Objects\SortableBindingList.cs" />
     <Compile Include="Objects\Curs.cs" />
     <Compile Include="Objects\Lesson.cs" />
     <Compile Include="Objects\MergedLesson.cs" />

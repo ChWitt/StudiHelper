@@ -33,6 +33,10 @@
       // 
       // StudiHelperDataGrid
       // 
+      this.AllowUserToAddRows = false;
+      this.AllowUserToDeleteRows = false;
+      this.AllowUserToOrderColumns = true;
+      this.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
       this.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.lessonOfCurs_CellFormatting);
       ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
       this.ResumeLayout(false);

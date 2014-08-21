@@ -1,5 +1,4 @@
-﻿
-namespace StudiHelper.UI.Components
+﻿namespace StudiHelper.UI.Components
 {
   using System;
   using System.ComponentModel;
@@ -40,11 +39,15 @@ namespace StudiHelper.UI.Components
       base.OnDataSourceChanged(e);
       this.InitColumns();
     }
+
     /// <summary>
     /// Initializes the columns.
     /// </summary>
     private void InitColumns()
     {
+      this.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+      this.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+
       this.Columns.Clear();
 
       int displayIndex = 0;
@@ -57,7 +60,8 @@ namespace StudiHelper.UI.Components
         Name = "cursName",
         ReadOnly = true,
         Visible = true,
-        Width = 50
+        Width = 50,
+        SortMode = DataGridViewColumnSortMode.Automatic
       };
 
       this.Columns.Add(cursIDColumn);
@@ -71,7 +75,8 @@ namespace StudiHelper.UI.Components
         Name = "cursDescription",
         ReadOnly = true,
         Visible = true,
-        Width = 170
+        Width = 170,
+        SortMode = DataGridViewColumnSortMode.Automatic
       };
 
       this.Columns.Add(cursDescriptionColumn);
@@ -85,7 +90,8 @@ namespace StudiHelper.UI.Components
         Name = "modul",
         ReadOnly = true,
         Visible = true,
-        Width = 150
+        Width = 150,
+        SortMode = DataGridViewColumnSortMode.Automatic
       };
 
       this.Columns.Add(moduleColumn);
@@ -99,7 +105,8 @@ namespace StudiHelper.UI.Components
         Name = "startDate",
         ReadOnly = true,
         Visible = true,
-        Width = 70
+        Width = 70,
+        SortMode = DataGridViewColumnSortMode.Automatic
       };
 
       this.Columns.Add(startDateColumn);
@@ -113,7 +120,8 @@ namespace StudiHelper.UI.Components
         Name = "startTime",
         ReadOnly = true,
         Visible = true,
-        Width = 50
+        Width = 50,
+        SortMode = DataGridViewColumnSortMode.NotSortable
       };
 
       this.Columns.Add(startTimeColumn);
@@ -127,7 +135,8 @@ namespace StudiHelper.UI.Components
         Name = "endTime",
         ReadOnly = true,
         Visible = true,
-        Width = 50
+        Width = 50,
+        SortMode = DataGridViewColumnSortMode.NotSortable
       };
 
       this.Columns.Add(endTimeColumn);
@@ -141,7 +150,8 @@ namespace StudiHelper.UI.Components
         Name = "building",
         ReadOnly = true,
         Visible = true,
-        Width = 70
+        Width = 70,
+        SortMode = DataGridViewColumnSortMode.Automatic
       };
 
       this.Columns.Add(buldingColumn);
@@ -155,7 +165,8 @@ namespace StudiHelper.UI.Components
         Name = "tutor",
         ReadOnly = true,
         Visible = true,
-        Width = 150
+        Width = 150,
+        SortMode = DataGridViewColumnSortMode.Automatic
       };
 
       this.Columns.Add(tutorColumn);
@@ -170,10 +181,10 @@ namespace StudiHelper.UI.Components
     private void lessonOfCurs_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
     {
       MergedLesson lesson = (MergedLesson)this.Rows[e.RowIndex].DataBoundItem;
-      
+
       if (lesson != null)
       {
-        this.SetLessonState(e, lesson);     
+        this.SetLessonState(e, lesson);
       }
     }
 

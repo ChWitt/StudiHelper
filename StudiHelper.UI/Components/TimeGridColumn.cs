@@ -44,7 +44,6 @@ namespace StudiHelper.UI.Components
     protected override object GetFormattedValue(object value, int rowIndex, ref DataGridViewCellStyle cellStyle, TypeConverter valueTypeConverter, TypeConverter formattedValueTypeConverter, DataGridViewDataErrorContexts context)
     {
       cellStyle.Format = "HH:mm";
-
       return base.GetFormattedValue(value, rowIndex, ref cellStyle, valueTypeConverter, formattedValueTypeConverter, context);
     }
   }
@@ -62,5 +61,6 @@ namespace StudiHelper.UI.Components
     {
       CellTemplate = new TimeGridCell();
     }
+    
   }
 }
